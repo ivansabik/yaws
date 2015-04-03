@@ -40,7 +40,7 @@ Function that is called when scraping is done
 
 #### IMDb
 
-```
+```javascript
 var yawscraper = require('yawscraper');
 
 var testPattern = {
@@ -66,7 +66,7 @@ yawscraper.scrape(testOptions, function(scraped) {
 
 #### NYTimes Mobile
 
-```
+```javascript
 var yawscraper = require('yawscraper');
 
 var testPattern = {
@@ -77,6 +77,7 @@ var testPattern = {
 };
 var testOptions = {
   url: 'http://www.nytimes.com/',
+  ua: 'iphone',
   pattern: testPattern,
   container: 'li'
 }
