@@ -55,7 +55,7 @@ yawscraper.scrape(options, function(response) {
 });
 ```
 
-#### Mobile NYTimes
+#### NYTimes Mobile
 
 ```
 var yawscraper = require('yawscraper')
