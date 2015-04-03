@@ -1,6 +1,6 @@
 var assert = require('assert-diff')
 var fs = require('fs');
-var scraper = require('../lib/yaws.js');
+var scraper = require('../lib/yawscraper');
 var nock = require('nock');
 
 describe('Scraper', function(){

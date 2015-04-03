@@ -4,18 +4,17 @@ yawscraper
 [![Build Status](https://travis-ci.org/ivansabik/yaws.svg)](https://travis-ci.org/ivansabik/yaws)
 
 yawscraper (Yet Another Web Scraper) is a simple to use yet very powerful web scraping util for NodeJS.
-Uses following libs:
+It supports scraping by patterns (using Regular Expressions) and by navigating DOM (JQuery style).
+Depends on following libs:
 
-- express
 - cheerio
 - mocha
 - assert-diff
 - nock
-- request-json
 
 ## Install
 
-`npm install yaws`
+`npm install yawscraper`
 
 ## Run tests
 
@@ -23,17 +22,15 @@ Uses following libs:
 
 ## Usage
 
-yaws.scrape(options, callback)
-
-#### Options
+yawscraper.scrape(options, callback)
 
  - url: The url to scrape
  - html: Optionally scrape an HTML
  - ua: Header for User-agent to use, default is 'chrome'. Other available ua's are chrome, firefox, explorer, safari, android, iphone, blackberry
  - referer: Header for Referer to use
  - cookie: Header for Cookies
- - searchElement = The element looked for (td, span, div, etc.), default is 'text'
- - options.allOcurrencies = When false, gets single result not all of them, default is true
+ - options.allOcurrencies: When false, gets single result an array with many, default is true
+ - container: Root rouping element to scrape (li, div, etc), containers are small groups that get scraped one after another
   
 #### Callback
 
@@ -44,29 +41,47 @@ Function that is called when scraping is done
 #### IMDb
 
 ```
-var yawscraper = require('yawscraper')
+var yawscraper = require('yawscraper');
 
-var options = {}
-options.pattern = {
+var testPattern = {
+  movieTitle: 'h4',
+  certificate: '.cert-runtime-genre',
+  time: 'time',
+  genres: '.cert-runtime-genre span[itemprop=genre]',
+  metascore: '.metascore no_ratings',
+  director: 'span[itemprop=director]',
+  actors: 'span[itemprop=actors]',
+  synopsis: '.thebuzz',
+  poster: 'poster shadowed img.src'
+};
+var testOptions = {
+  url: 'http://www.imdb.com/movies-in-theaters',
+  pattern: testPattern,
+  container: 'div[itemtype=http://schema.org/Movie]'
 }
-options.url = 'http://www.imdb.com/movies-in-theaters/'
-yawscraper.scrape(options, function(response) {
-  console.log(response);
+yawscraper.scrape(testOptions, function(scraped) {
+  console.log(scraped);
 });
 ```
 
 #### NYTimes Mobile
 
 ```
-var yawscraper = require('yawscraper')
+var yawscraper = require('yawscraper');
 
-var options = {}
-options.pattern = {
+var testPattern = {
+  title: 'span .title',
+  image: 'highlighted-thumb img.src',
+  url: 'a.href',
+  description: 'p'
+};
+var testOptions = {
+  url: 'http://www.nytimes.com/',
+  pattern: testPattern,
+  container: 'li'
 }
-options.url = 'http://mobile.nytimes.com/international/'
-options.ua = 'iphone'
-yawscraper.scrape(options, function(response) {
-  console.log(response);
+yawscraper.scrape(testOptions, function(scraped) {
+  console.log(scraped);
 });
 ```
 
