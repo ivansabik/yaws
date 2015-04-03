@@ -2,6 +2,7 @@ yawscraper
 ===========
 
 [![Build Status](https://travis-ci.org/ivansabik/yaws.svg)](https://travis-ci.org/ivansabik/yaws)
+[![npm Status](https://travis-ci.org/ivansabik/yaws.svg)]https://img.shields.io/npm/v/yawscraper.svg
 
 yawscraper (Yet Another Web Scraper) is a simple to use yet very powerful web scraping util for NodeJS.
 It supports scraping by patterns (using Regular Expressions) and by navigating DOM (JQuery style).
