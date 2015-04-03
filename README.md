@@ -41,16 +41,16 @@ Function that is called when scraping is done
 
 ## Examples
 
-#### IMDB
+#### IMDb
 
 ```
-var yaws = require('jaws')
+var yawscraper = require('yawscraper')
 
 var options = {}
 options.pattern = {
 }
 options.url = 'http://www.imdb.com/movies-in-theaters/'
-yaws.scrape(options, function(response) {
+yawscraper.scrape(options, function(response) {
   console.log(response);
 });
 ```
@@ -58,14 +58,14 @@ yaws.scrape(options, function(response) {
 #### Mobile NYTimes
 
 ```
-var yaws = require('jaws')
+var yawscraper = require('yawscraper')
 
 var options = {}
 options.pattern = {
 }
 options.url = 'http://mobile.nytimes.com/international/'
 options.ua = 'iphone'
-yaws.scrape(options, function(response) {
+yawscraper.scrape(options, function(response) {
   console.log(response);
 });
 ```
