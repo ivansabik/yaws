@@ -1,6 +1,6 @@
 {
   "name": "yawscraper",
-  "description": "A simple to use but powerful scraper for NodeJS (Yet Another Web Scraper)",
+  "description": "A simple to use but powerful scraper for NodeJS,
   "author": "Ivan Sabik <sabik@mandroslabs.com>",
   "version": "0.0.1",
   "scripts": {

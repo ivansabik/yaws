@@ -27,13 +27,13 @@ yaws.scrape(options, callback)
 
 #### Options
 
-url: The url to scrape
-html: Optionally scrape an HTML
-ua: Header for User-agent to use, default is 'chrome'. Other available ua's are chrome, firefox, explorer, safari, android, iphone, blackberry
-referer: Header for Referer to use
-cookie: Header for Cookies
-searchElement = The element looked for (td, span, div, etc.), default is 'text'
-options.allOcurrencies = When false, gets single result not all of them, default is true
+ - url: The url to scrape
+ - html: Optionally scrape an HTML
+ - ua: Header for User-agent to use, default is 'chrome'. Other available ua's are chrome, firefox, explorer, safari, android, iphone, blackberry
+ - referer: Header for Referer to use
+ - cookie: Header for Cookies
+ - searchElement = The element looked for (td, span, div, etc.), default is 'text'
+ - options.allOcurrencies = When false, gets single result not all of them, default is true
   
 #### Callback
 
@@ -41,11 +41,11 @@ Function that is called when scraping is done
 
 ## Examples
 
-var yaws = require('jaws')
-
 #### IMDB
 
 ```
+var yaws = require('jaws')
+
 var options = {}
 options.pattern = {
 }
@@ -58,6 +58,8 @@ yaws.scrape(options, function(response) {
 #### Mobile NYTimes
 
 ```
+var yaws = require('jaws')
+
 var options = {}
 options.pattern = {
 }
