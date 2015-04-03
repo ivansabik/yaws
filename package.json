@@ -1,0 +1,28 @@
+{
+  "name": "yawscraper",
+  "description": "A simple to use but powerful scraper for NodeJS (Yet Another Web Scraper)",
+  "author": "Ivan Sabik <sabik@mandroslabs.com>",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "mocha"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.12.2",
+    "cheerio": "^0.19.0",
+    "request": "^2.54.0"
+  },
+  "devDependencies" : {
+    "mocha": "^2.2.1",
+    "assert-diff": "^1.0.1",
+    "nock": "^0.59.0",
+    "request-json": "^0.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivansabik/yaws.git"
+  }
+}
