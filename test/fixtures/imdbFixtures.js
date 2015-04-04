@@ -1,4 +1,3 @@
-// imdbFixtures.js
 module.exports.imdbAssert = [
   {
     movieTitle: 'Furious 7 (2015)',

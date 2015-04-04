@@ -1,5 +1,5 @@
 var assert = require('assert-diff');
-var yawscraper = require('../lib/yawscraper');
+var Yawscraper = require('../lib/yawscraper');
 var nock = require('nock');
 var fixtures = require('./fixtures/nyTimesFixtures');
 
@@ -8,20 +8,21 @@ describe('NY Times mobile', function(){
     nock('http://mobile.nytimes.com/')
       .get('/international/')
       .reply(200, fixtures.nyTimesHtml);
-      var testPattern = {
+      var pattern = {
         title: 'span .title',
-        image: 'highlighted-thumb img.src',
+        image: 'img.src',
         url: 'a.href',
         description: 'p'
       };
-      var testOptions = {
+      var options = {
         url: 'http://mobile.nytimes.com/international',
-        pattern: testPattern,
+        pattern: pattern,
         container: 'li'
-      }
-      yawscraper.scrape(testOptions, function(response) {
+      };
+      yawscraper(options, function(response) {
         assert.deepEqual(fixtures.nyTimesAssert, response);
         done();
-      });
+      })
+      .scrape();
   });
 });

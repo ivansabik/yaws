@@ -1,5 +1,5 @@
 var assert = require('assert-diff');
-var yawscraper = require('../lib/yawscraper');
+var Yawscraper = require('../lib/yawscraper');
 var nock = require('nock');
 var fixtures = require('./fixtures/imdbFixtures');
 
@@ -8,7 +8,7 @@ describe('IMDb', function(){
     nock('http://www.imdb.com/')
       .get('/movies-in-theaters/')
       .reply(200, fixtures.imdbHtml);
-    var testPattern = {
+    var pattern = {
       movieTitle: 'h4',
       certificate: '.cert-runtime-genre',
       time: 'time',
@@ -16,17 +16,18 @@ describe('IMDb', function(){
       metascore: '.metascore no_ratings',
       director: 'span[itemprop=director]',
       actors: 'span[itemprop=actors]',
-      synopsis: '.thebuzz',
-      poster: 'poster shadowed img.src'
+      synopsis: 'div[itemprop=description]',
+      poster: 'img.src'
     };
-    var testOptions = {
+    var options = {
       url: 'http://www.imdb.com/movies-in-theaters',
-      pattern: testPattern,
+      pattern: pattern,
       container: 'div[itemtype=http://schema.org/Movie]'
     }
-    yawscraper.scrape(testOptions, function(response) {
+    new Yascraper(options, function(response) {
       assert.deepEqual(fixtures.imdbAssert, response);
       done();
-    });
+    })
+    .scrape();
   });
 });

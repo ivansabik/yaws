@@ -1,5 +1,3 @@
-// nytimesFixtures.js
-
 module.exports.nyTimesAssert = [
   {
     title: 'Iran’s Leaders Begin Tricky Task of Selling Nuclear Deal at Home',
