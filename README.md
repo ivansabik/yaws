@@ -16,7 +16,7 @@ Depends on following libs:
 
 ## Features
 
-- Different alternatives for defining scrape target
+- Definition of scrape target
     - Define HTML to scrape
     - Scrape from url with optional parameters (POST, GET)
     - Define referer in request
