@@ -1,7 +1,7 @@
 yawscraper
 ===========
 
-[![Build Status](https://travis-ci.org/ivansabik/yawscraper.svg)](https://travis-ci.org/ivansabik/yawscraper)
+[![Travis CI Build Status](https://travis-ci.org/ivansabik/yawscraper.svg)](https://travis-ci.org/ivansabik/yawscraper)
 [![npm Status](https://img.shields.io/npm/v/yawscraper.svg)](http://libraries.io/npm/yawscraper)
 
 yawscraper (Yet Another Web Scraper) is a simple to use yet very powerful web scraping util for NodeJS.
@@ -41,6 +41,8 @@ Function that is called when scraping is done
 
 #### IMDb
 
+[![ywscraper example IMDb](https://raw.githubusercontent.com/ivansabik/yawscraper/master/doc/yawscraper-imdb-example.png)]
+
 ```javascript
 var yawscraper = require('yawscraper');
 
@@ -66,6 +68,8 @@ yawscraper.scrape(imdbOptions, function(scraped) {
 ```
 
 #### NYTimes Mobile
+
+[![ywscraper example NY Times mobile](https://raw.githubusercontent.com/ivansabik/yawscraper/master/doc/yawscraper-nytimes-example.png)]
 
 ```javascript
 var yawscraper = require('yawscraper');
