@@ -44,7 +44,7 @@ Function that is called when scraping is done
 ```javascript
 var yawscraper = require('yawscraper');
 
-var testPattern = {
+var imdbPattern = {
   movieTitle: 'h4',
   certificate: '.cert-runtime-genre',
   time: 'time',
@@ -55,12 +55,12 @@ var testPattern = {
   synopsis: '.thebuzz',
   poster: 'poster shadowed img.src'
 };
-var testOptions = {
+var imdbOptions = {
   url: 'http://www.imdb.com/movies-in-theaters',
-  pattern: testPattern,
+  pattern: imdbPattern,
   container: 'div[itemtype=http://schema.org/Movie]'
 }
-yawscraper.scrape(testOptions, function(scraped) {
+yawscraper.scrape(imdbOptions, function(scraped) {
   console.log(scraped);
 });
 ```
@@ -70,19 +70,19 @@ yawscraper.scrape(testOptions, function(scraped) {
 ```javascript
 var yawscraper = require('yawscraper');
 
-var testPattern = {
+var nyTimesPattern = {
   title: 'span .title',
   image: 'highlighted-thumb img.src',
   url: 'a.href',
   description: 'p'
 };
-var testOptions = {
+var nyTimesOptions = {
   url: 'http://www.nytimes.com/',
   ua: 'iphone',
-  pattern: testPattern,
+  pattern: nyTimesPattern,
   container: 'li'
 }
-yawscraper.scrape(testOptions, function(scraped) {
+yawscraper.scrape(nyTimesOptions, function(scraped) {
   console.log(scraped);
 });
 ```

@@ -8,9 +8,9 @@ describe('yawscraper', function(){
   });
   it('should scrape for element navigation in pattern', function(done) {
   });
-  it('should scrape for images <img src>=""', function(done) {
+  it('should scrape for images <img src="">', function(done) {
   });
-  it('should scrape for links <a>', function(done) {
+  it('should scrape for links <a href="">', function(done) {
   });
   it('should recursively scrape for subelements defined in pattern', function(done) {
   });
@@ -29,6 +29,12 @@ describe('yawscraper', function(){
   it('should assign Cookie in headers', function(done) {
   });
   it('should scrape single element, not all occurencies', function(done) {
+  });
+  it('should find container elements to be the scraping targets', function(done) {
+  });
+  it('should scrape a table', function(done) {
+  });
+  it('should scrape options and values for a <select> element', function(done) {
   });
   it('should throw error when callback is not a function', function() {
     var testFunction = function(){scraper.scrape({}, callback='console')};
