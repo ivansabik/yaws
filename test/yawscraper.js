@@ -8,12 +8,12 @@ describe('yawscraper', function(){
   it('should scrape a text for regex in pattern', function(done) {
     // Find items in USPS tracking
     var pattern = {
-      date: /November 17, 2014 , 1:56 pm/,
-      location: /ANKENY, IA 50021/
+      date: /.* [0-9]{2}, [0-9]{4} , [0-9]{1,2}:[0-9]{1,2} (am|pm)/,
+      location: /[A-Z]*, [A-Z]{2} [0-9]{5}/
     };
     var options = {
       pattern: pattern,
-      html: uspsTracking,
+      html: fixtures.uspsHtml,
       container: 'tr'
     }
     yawscraper(options, function(response) {
@@ -32,7 +32,7 @@ describe('yawscraper', function(){
     };
     var options = {
       pattern: pattern,
-      html: wikipediaArticleMenu,
+      html: fixtures.wikipediaHtml,
       container: 'p-lang ul',
       allOcurrencies: false
     }
@@ -43,19 +43,67 @@ describe('yawscraper', function(){
     })
     .scrape();
   });
-  it('should match all elements in pattern, to produce scraped object', function(done) {
+  it('should enfroce to match all elements in pattern, to produce scraped object', function(done) {
+    // Find items in USPS tracking
+    var pattern = {
+      date: /.* [0-9]{2}, [0-9]{4} , [0-9]{1,2}:[0-9]{1,2} (am|pm)/,
+      location: /[A-Z]*, [A-Z]{2} [0-9]{5}/
+    };
+    var options = {
+      pattern: pattern,
+      html: fixtures.uspsHtml,
+      container: 'tr',
+      enforceMatchCall: true
+    }
+    yawscraper(options, function(response) {
+      assert.deepEqual(fixtures.assertOptionsList, response);
+      done();
+    })
+    .scrape();
   });
-  it('should scrape for a list of texts', function(done) {
+  it('should scrape for more than one option (regexp, dom, etc.)', function(done) {
+    // Find items in USPS tracking
+    var pattern = {
+      status: [
+        /Delivered, In\/At Mailbox/,
+        /Departed USPS Facility/,
+        /Arrived at USPS Origin Facility/
+      ]
+    };
+    var options = {
+      pattern: pattern,
+      html: fixtures.uspsHtml,
+      container: 'tr'
+    }
+    yawscraper(options, function(response) {
+      assert.deepEqual(fixtures.assertOptionsList, response);
+      done();
+    })
+    .scrape();
   });
   it('should scrape for element navigation in pattern', function(done) {
-  });
-  it('should scrape for images <img src="">', function(done) {
-  });
-  it('should scrape for links <a href="">', function(done) {
+    // Find listings in Craigslist
+    var pattern = {
+      date: 'time.datetime',
+      title: 'a',
+      price: '.price',
+      housingType: '.housing',
+      address: '.pnr',
+      link: 'a.href'
+    };
+    var options = {
+      pattern: pattern,
+      html: fixtures.craigslistHtml,
+      container: '.row'
+    }
+    yawscraper(options, function(response) {
+      assert.deepEqual(assert, response);
+      done();
+    })
+    .scrape();
   });
   it('should recursively scrape for subelements defined in pattern', function(done) {
-  });
-  it('should navigate inside containers', function(done) {
+    // Don't remember what this was X_x
   });
   it('should default container to body', function(done) {
   });

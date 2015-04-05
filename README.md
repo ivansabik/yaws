@@ -28,7 +28,7 @@ Depends on following libs:
     - Searched based on containers (li, td, table, etc)
     - Search on a list of texts
     - Search for regular expressions
-    - Scrape by navigating the DOM
+    - Scrape by navigating the DOM JQuery style
     - Scrape images
     - Scrape links
     - Scrape tables
@@ -46,7 +46,7 @@ Depends on following libs:
 
 ## Usage
 
-#### yawscraper.scrape(options, callback)
+#### yawscraper(options, callback).scrape()
 
  - url: The url to scrape
  - html: Optionally scrape an HTML
@@ -55,10 +55,6 @@ Depends on following libs:
  - cookie: Header for Cookies
  - options.allOcurrencies: When false, gets single result an array with many, default is true
  - container: Root rouping element to scrape (li, div, etc), containers are small groups that get scraped one after another
-  
-#### Callback
-
-Function that is called when scraping is done
 
 ## Examples
 
