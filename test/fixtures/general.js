@@ -14,7 +14,7 @@ module.exports.assertScrapeRegex = [
   { date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604' }
 ];
 
-module.exports.assertForceMatchAll = [
+module.exports.assertforceMatch = [
   { date: 'November 17, 2014 , 1:56 pm', location: 'ANKENY, IA 50021' },
   { date: 'November 16, 2014 , 2:28 am', location: 'DES MOINES, IA 50395' },
   { date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604' }

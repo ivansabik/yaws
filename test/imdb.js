@@ -1,5 +1,5 @@
 var assert = require('assert-diff');
-var Yawscraper = require('../lib/yawscraper');
+var Yaws = require('../lib/yaws');
 var nock = require('nock');
 var fixtures = require('./fixtures/imdbFixtures');
 

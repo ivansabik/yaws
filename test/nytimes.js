@@ -1,5 +1,5 @@
 var assert = require('assert-diff');
-var Yawscraper = require('../lib/yawscraper');
+var Yaws = require('../lib/yaws');
 var nock = require('nock');
 var fixtures = require('./fixtures/nyTimesFixtures');
 
@@ -19,7 +19,7 @@ describe('NY Times mobile', function(){
         pattern: pattern,
         container: 'li'
       };
-      yawscraper(options, function(response) {
+      yaws(options, function(response) {
         assert.deepEqual(fixtures.nyTimesAssert, response);
         done();
       })

@@ -1,6 +1,6 @@
 {
-  "name": "yawscraper",
-  "description": "A simple to use but powerful scraper for NodeJS",
+  "name": "yaws",
+  "description": "yaws (Yet Another Web Scraper) is a simple to use yet very powerful web scraping util for Node.js",
   "author": "Ivan Sabik <sabik@mandroslabs.com>",
   "version": "0.0.1",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ivansabik/yawscraper.git"
+    "url": "https://github.com/ivansabik/yaws.git"
   }
 }
