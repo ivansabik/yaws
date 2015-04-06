@@ -26,9 +26,9 @@ Depends on following libs:
 - Scrape
     - Define different scraping patterns which are returned as objects
     - Searched based on containers (li, td, table, etc)
-    - Search on a list of texts
     - Search for regular expressions
     - Scrape by navigating the DOM JQuery style
+    - Search for single element or all ocurrencies
     - Scrape images
     - Scrape links
     - Scrape tables
