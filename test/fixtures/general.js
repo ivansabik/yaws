@@ -7,23 +7,26 @@ module.exports.uspsHtml = '<div class="information"><h3>Product &amp; Tracking I
 // http://montreal.craigslist.ca/search/apa
 module.exports.craigslistHtml = '<div class="content"> <section class="favlistsection"> <section class="favlistinfo"> </section> </section> <p class="row" data-pid="4931613761"> <a href="/apa/4931613761.html" class="i" data-ids="0:00g0g_32UnJsnJkk,0:00J0J_bEebRC1NXmG,0:00k0k_6pseRizAAa4,0:00J0J_8G7x5Lu8H7h,0:00M0M_5bxvWU4tDCz,0:01616_9yX9f0eZfZE"></a> <span class="txt"> <span class="star"></span> <span class="pl"> <time datetime="2015-04-04 18:08" title="sam 04 avr 06:08:56 (Il y a 13 min.)">avr 4</time> <a href="/apa/4931613761.html" data-id="4931613761" data-repost-of="4761033828" class="hdrlnk">Grand Loft Plateau - Metro - Balcon</a> </span> <span class="l2"> <span class="price">$650</span> <span class="housing">/ 1br - </span> <span class="pnr"> <small> (2473 Jean-Talon)</small> <span class="px"> <span class="p"> Photo <span class="maptag" data-pid="4931613761">carte</span></span></span> </span> </span> </span> </p><p class="row" data-pid="4957471144"> <a href="/apa/4957471144.html" class="i" data-ids="0:00b0b_hMgpOIxqqkq,0:00N0N_4Uo5xOGQlQA,0:00C0C_gs3oZrejkHR,0:00P0P_fJxJerGdAbm"></a> <span class="txt"> <span class="star"></span> <span class="pl"> <time datetime="2015-04-04 18:07" title="sam 04 avr 06:07:50 (Il y a 14 min.)">avr 4</time> <a href="/apa/4957471144.html" data-id="4957471144" class="hdrlnk">2.5 Marquette Coin Rachel Plateau</a> </span> <span class="l2"> <span class="price">$665</span> <span class="housing">/ 1br - </span> <span class="pnr"> <small> (4295 Marquette)</small> <span class="px"> <span class="p"> Photo <span class="maptag" data-pid="4957471144">carte</span></span></span> </span> </span> </span> </p><p class="row" data-pid="4929549185"> <a href="/apa/4929549185.html" class="i" data-ids="0:00R0R_baIzuojno0F,0:00303_9SZHL09tSTo,0:00q0q_ew0OFM3fUNh,0:00k0k_7CAFbpCypho,0:00D0D_ftkTFSQawbR,0:00I0I_jlOGqlnee7M,0:00g0g_32UnJsnJkk,0:00i0i_dxdpt8SYEy5"></a> <span class="txt"> <span class="star"></span> <span class="pl"> <time datetime="2015-04-04 18:07" title="sam 04 avr 06:07:39 (Il y a 14 min.)">avr 4</time> <a href="/apa/4929549185.html" data-id="4929549185" class="hdrlnk">GRAND LOFT 2473 Jean-Talon #4</a> </span> <span class="l2"> <span class="price">$650</span> <span class="housing">/ 1br - </span> <span class="pnr"> <small> (2473 Jean-Talon #4)</small> <span class="px"> <span class="p"> Photo <span class="maptag" data-pid="4929549185">carte</span></span></span> </span> </span> </span> <\/p><div id="mapcontainer" data-arealat="45.508099" data-arealon="-73.555000"> <div id="noresult_overlay"><\/div><div id="noresult_text"> <span class="message">Aucun élément adressable trouvé</span> <\/div><div id="map" class="loading"><div class="closeFS">×</div></div><\/div><div class="toc_legend bottom"> <div class="center"> <div class="tocview"> <span class="buttongroup"><a class="backtotop button" href="#pagecontainer">^ Haut de page</a></span> <\/div><div class="tocsort"> <span class="buttongroup"><a class="backtotop button" href="#pagecontainer">^ Haut de page</a></span> <\/div><span class="paginator buttongroup firstpage"><span class="resulttotal">affichage de <span class="displaycount">...</span> de <span class="totalcount">9053</span> annonces</span><span class="buttons"><a href="/search/apa?" class="button first" title="1re page">&lt;&lt;</a><span class="button first" title="1re page">&lt;&lt;</span><a href="/search/apa?" class="button prev" title="Page précédente">&lt; Préc.</a><span class="button prev" title="Page précédente">&lt; Préc.</span><span class="button pagenum"><span class="range">1 - 100</span> de <span class="totalcount">9053</span></span><a href="/search/apa?s=100&amp;" class="button next" title="Page suiv."> Suiv. &gt; </a><span class="button next" title="Page suiv."> Suiv. &gt; </span></span></span> <\/div><\/div></div>';
 
+// http://www.piuha.fi/excel-function-name-translation/index.php?page=english-spanish.html
+module.exports.excelFunctionsHtml = '<table style="border-collapse: collapse;" border="1" cellspacing="0" cellpadding="10" width="813"><colgroup><col style="width: 48pt;" width="64"> <col style="width: 95pt;" width="127"> <col style="width: 48pt;" width="64"> </colgroup> <tbody><tr style="height: 15pt;" height="20"><td style="width: 298px;"><strong>Function</strong></td><td style="width: 298px;"><strong>Función</strong></td><td style="width: 298px;"><strong>Description</strong></td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20"><strong>Add-in and Automation functions</strong></td><td><strong>Funciones de complementos y automatización</strong></td><td><strong>&nbsp;</strong></td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20">CALL</td><td>LLAMAR</td><td>Calls a procedure in a dynamic link library or code resource</td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20">EUROCONVERT</td><td>EUROCONVERT</td><td>Converts a number to euros, converts a number from euros to a euro member currency, or converts a number from one euro member currency to another by using the euro as an intermediary (triangulation)</td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20">GETPIVOTDATA</td><td>IMPORTARDATOSDINAMICOS</td><td>Returns data stored in a PivotTable report</td></tr></tbody></table>';
+
 module.exports.assertScrapeRegex = [
-  { date: 'November 17, 2014 , 1:56 pm', location: 'ANKENY, IA 50021' },
-  { location: 'ANKENY, IA 50021' },
-  { date: 'November 16, 2014 , 2:28 am', location: 'DES MOINES, IA 50395' },
-  { date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604' }
+  {date: 'November 17, 2014 , 1:56 pm', location: 'ANKENY, IA 50021'},
+  {location: 'ANKENY, IA 50021'},
+  {date: 'November 16, 2014 , 2:28 am', location: 'DES MOINES, IA 50395'},
+  {date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604'}
 ];
 
 module.exports.assertforceMatch = [
-  { date: 'November 17, 2014 , 1:56 pm', location: 'ANKENY, IA 50021' },
-  { date: 'November 16, 2014 , 2:28 am', location: 'DES MOINES, IA 50395' },
-  { date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604' }
+  {date: 'November 17, 2014 , 1:56 pm', location: 'ANKENY, IA 50021'},
+  {date: 'November 16, 2014 , 2:28 am', location: 'DES MOINES, IA 50395'},
+  {date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604'}
 ];
 
 module.exports.assertOptionsList = [
-  { status: 'Delivered, In/At Mailbox' },
-  { status: 'Departed USPS Facility' },
-  { status: 'Arrived at USPS Origin Facility' }
+  {status: 'Delivered, In/At Mailbox'},
+  {status: 'Departed USPS Facility'},
+  {status: 'Arrived at USPS Origin Facility'}
 ];
 
 module.exports.assertElementNavigation = [
@@ -33,7 +36,7 @@ module.exports.assertElementNavigation = [
     price: '$650',
     housingType: '/ 1br -',
     address: '(2473 Jean-Talon)',
-    link: '/apa/4931613761.html' 
+    link: '/apa/4931613761.html'
   },
   {
     date: '2015-04-04 18:07',
@@ -41,7 +44,7 @@ module.exports.assertElementNavigation = [
     price: '$665',
     housingType: '/ 1br -',
     address: '(4295 Marquette)',
-    link: '/apa/4957471144.html' 
+    link: '/apa/4957471144.html'
   },
   {
     date: '2015-04-04 18:07',
@@ -49,6 +52,29 @@ module.exports.assertElementNavigation = [
     price: '$650',
     housingType: '/ 1br -',
     address: '(2473 Jean-Talon #4)',
-    link: '/apa/4929549185.html' 
+    link: '/apa/4929549185.html'
+  }
+];
+
+module.exports.assertTable = [
+  {
+    function: 'Add-in and Automation functions',
+    funcion: 'Funciones de complementos y automatización',
+    descripcion: ''
+  },
+  {
+    function: 'CALL',
+    funcion: 'LLAMAR',
+    descripcion: 'Calls a procedure in a dynamic link library or code resource'
+  },
+  {
+    function: 'EUROCONVERT',
+    funcion: 'EUROCONVERT',
+    descripcion: 'Converts a number to euros, converts a number from euros to a euro member currency, or converts a number from one euro member currency to another by using the euro as an intermediary (triangulation)'
+  },
+  {
+    function: 'GETPIVOTDATA',
+    funcion: 'IMPORTARDATOSDINAMICOS',
+    descripcion: 'Returns data stored in a PivotTable report'
   }
 ];

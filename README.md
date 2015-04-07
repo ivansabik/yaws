@@ -17,8 +17,9 @@ Depends on following libs:
 ## Features
 
 - Definition of scrape target
-    - Define HTML to scrape
+    - Scrape from an HTML string/text
     - Scrape from url with optional parameters (POST, GET)
+    - Scrape from e-mail account (IMAP)
     - Define referer in request
     - Assign cookie in request
     - Use different mobile and desktop browsers in request
@@ -58,4 +59,10 @@ Depends on following libs:
 
 ## Examples
 
-See examples.md
+#### URL
+
+#### HTML
+
+#### IMAP
+
+See examples.md for extensive list of use cases

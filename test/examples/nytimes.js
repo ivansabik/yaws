@@ -1,7 +1,7 @@
 var assert = require('assert-diff');
-var Yaws = require('../lib/yaws');
+var Yaws = require('../../lib/yaws');
 var nock = require('nock');
-var fixtures = require('./fixtures/nyTimesFixtures');
+var fixtures = require('../fixtures/nyTimesFixtures');
 
 describe('NY Times mobile', function(){
   it('should get international news headlines', function(done) {

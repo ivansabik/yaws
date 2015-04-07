@@ -1,7 +1,7 @@
 var assert = require('assert-diff');
-var Yaws = require('../lib/yaws');
+var Yaws = require('../../lib/yaws');
 var nock = require('nock');
-var fixtures = require('./fixtures/imdbFixtures');
+var fixtures = require('../fixtures/imdbFixtures');
 
 describe('IMDb', function(){
   it('should get new movies in theatres', function(done) {

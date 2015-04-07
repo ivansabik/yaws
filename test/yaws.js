@@ -142,6 +142,12 @@ describe('yaws scrape', function () {
   it('should find container elements to be the scraping targets', function (done) {
   });
   it('should scrape a <table> element', function (done) {
+    // html is fixtures.excelFunctionsHtml
+    yaws(options, function (response) {
+      assert.deepEqual(fixtures.assertTable, response);
+      done();
+    })
+    .scrape();
   });
   it('should scrape options and values for a <select> element', function (done) {
   });
@@ -153,11 +159,13 @@ describe('yaws scrape', function () {
   });
   it('should use request parameters for POST and GET', function (done) {
   });
+  it('should scrape from e-mail with IMAP', function (done) {
+  });
   it('should use POST for request', function (done) {
   });
   it('should paginate among pages defined by user', function (done) {
   });
-  it('should scrape from html string without making http requests', function (done) {
+  it('should scrape from HTML text without making http requests', function (done) {
     var mockHttp = nock('')
     .get('')
     .reply(200, html);
