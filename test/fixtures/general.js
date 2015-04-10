@@ -11,10 +11,16 @@ module.exports.craigslistHtml = '<div class="content"> <section class="favlistse
 module.exports.excelFunctionsHtml = '<table style="border-collapse: collapse;" border="1" cellspacing="0" cellpadding="10" width="813"><colgroup><col style="width: 48pt;" width="64"> <col style="width: 95pt;" width="127"> <col style="width: 48pt;" width="64"> </colgroup> <tbody><tr style="height: 15pt;" height="20"><td style="width: 298px;"><strong>Function</strong></td><td style="width: 298px;"><strong>Función</strong></td><td style="width: 298px;"><strong>Description</strong></td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20"><strong>Add-in and Automation functions</strong></td><td><strong>Funciones de complementos y automatización</strong></td><td><strong>&nbsp;</strong></td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20">CALL</td><td>LLAMAR</td><td>Calls a procedure in a dynamic link library or code resource</td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20">EUROCONVERT</td><td>EUROCONVERT</td><td>Converts a number to euros, converts a number from euros to a euro member currency, or converts a number from one euro member currency to another by using the euro as an intermediary (triangulation)</td></tr><tr style="height: 15pt;" height="20"><td style="height: 15pt;" height="20">GETPIVOTDATA</td><td>IMPORTARDATOSDINAMICOS</td><td>Returns data stored in a PivotTable report</td></tr></tbody></table>';
 
 module.exports.assertScrapeRegex = [
-  {date: 'November 17, 2014 , 1:56 pm', location: 'ANKENY, IA 50021'},
+  {date: 'November 17, 2014,1:56 pm', location: 'ANKENY, IA 50021'},
+  {date: 'November 16, 2014,2:28 am', location: 'DES MOINES, IA 50395'},
+  {date: 'November 12, 2014,11:11 pm', location: 'LANCASTER, PA 17604'}
+];
+
+module.exports.assertScrapeRegexLeafNodes = [
+  {date: 'November 17, 2014,1:56 pm', location: 'ANKENY, IA 50021'},
   {location: 'ANKENY, IA 50021'},
-  {date: 'November 16, 2014 , 2:28 am', location: 'DES MOINES, IA 50395'},
-  {date: 'November 12, 2014 , 11:11 pm', location: 'LANCASTER, PA 17604'}
+  {date: 'November 16, 2014,2:28 am', location: 'DES MOINES, IA 50395'},
+  {date: 'November 12, 2014,11:11 pm', location: 'LANCASTER, PA 17604'}
 ];
 
 module.exports.assertforceMatch = [
