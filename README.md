@@ -1,6 +1,8 @@
 yaws
 ===========
 
+![yaws logo](https://raw.githubusercontent.com/ivansabik/yaws/master/doc/yaws.png)
+
 [![Travis CI Build Status](https://travis-ci.org/ivansabik/yaws.svg)](https://travis-ci.org/ivansabik/yaws)
 [![npm Status](https://img.shields.io/npm/v/yaws.svg)](http://libraries.io/npm/yaws)
 
@@ -10,9 +12,9 @@ It is a Work in Progress including tests for specific cases used when developing
 Depends on following libs:
 
 - cheerio
-- mocha
-- assert-diff
-- nock
+- mocha (for tests)
+- assert-diff (for tests)
+- nock (for tests)
 
 ## Features
 
@@ -30,10 +32,9 @@ Depends on following libs:
     - Search for regular expressions
     - Scrape by navigating the DOM JQuery style
     - Search for single element or all ocurrencies
-    - Scrape images
-    - Scrape links
+    - Scrape for attributes (images, links, etc)
     - Scrape tables
-    - Get single or multiple ocurrences
+    - Sarch for single or multiple ocurrences
     - Pagination
 
 ## Install
@@ -66,3 +67,7 @@ Depends on following libs:
 #### IMAP
 
 See examples.md for extensive list of use cases
+
+##### Copyright
+
+Shark in logo by [http://www.how-to-draw-funny-cartoons.com/](Martin Berube)

@@ -1,6 +1,6 @@
 #### IMDb
 
-![yawscraper example IMDb](https://raw.githubusercontent.com/ivansabik/yawscraper/master/doc/yawscraper-imdb-example.png)
+![yaws example IMDb](https://raw.githubusercontent.com/ivansabik/yaws/master/doc/yawsc-imdb-example.png)
 
 ```javascript
 var yawscraper = require('yawscraper');
@@ -48,7 +48,7 @@ Should give something like:
 
 #### NYTimes Mobile
 
-![ywscraper example NY Times mobile](https://raw.githubusercontent.com/ivansabik/yawscraper/master/doc/yawscraper-nytimes-example.png)
+![yaws example NY Times mobile](https://raw.githubusercontent.com/ivansabik/yaws/master/doc/yaws-nytimes-example.png)
 
 ```javascript
 var yawscraper = require('yawscraper');
