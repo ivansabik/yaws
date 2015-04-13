@@ -56,7 +56,7 @@ describe('yaws scrape', function () {
    * The user scrapes an attribute's value by using a regex. In this case
    * a link (href attribute) for a wikipedia article in German.
    */ 
-  it('should find an attribute value for regex in pattern', function (done) {
+  it.only('should find an attribute value for regex in pattern', function (done) {
     var pattern = {
       link: {
         regex: /Deutsch/,
@@ -66,13 +66,13 @@ describe('yaws scrape', function () {
     var options = {
       pattern: pattern,
       html: fixtures.wikipediaHtml,
-      container: 'p-lang ul',
+      container: 'li',
       allOcurrencies: false
     };
-    var assert = {link: '//de.wikipedia.org/wiki/Germanwings'};
+    var assertResult = [{link: '//de.wikipedia.org/wiki/Germanwings'}];
     yaws(options)
     .scrape(function (response) {
-      assert.deepEqual(assert, response);
+      assert.deepEqual(assertResult, response);
       done();
     });
   });
