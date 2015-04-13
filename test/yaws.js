@@ -80,7 +80,7 @@ describe('yaws scrape', function () {
   /*
    * The user scrapes defining an array of regex
    */ 
-  it.only('should find a list of options (regexp, dom, etc.)', function (done) {
+  it('should find a list of options (regexp, dom, etc.)', function (done) {
     var pattern = {
       status: [ /Delivered, In\/At Mailbox/, /Departed USPS Facility/, /Arrived at USPS Origin Facility/ ]
     };
@@ -100,17 +100,11 @@ describe('yaws scrape', function () {
    * elements in a Craiglist listing.
    */
   it('should find element based on dom navigation', function (done) {
-    var assert = {
-      date: '2015-03-14 11:06am',
-      title: '$650 / 1br - Grand Loft Plateau - Metro - Balcon (2473 Jean-Talon)',
-      price: '$650 ',
-      housingType: '/ 1br - '
-    };
     var pattern = {
-      date: 'time.datetime',
-      title: 'postingtitle',
+      title: '.hdrlnk',
       price: '.price',
-      housingType: '.housing'
+      housingType: '.housing',
+      address: '.pnr small'
     };
     var options = {
       pattern: pattern,
@@ -119,7 +113,27 @@ describe('yaws scrape', function () {
     };
     yaws(options)
     .scrape(function (response) {
-      assert.deepEqual(assert, response);
+      assert.deepEqual(fixtures.assertElementNavigation, response);
+      done();
+    });
+  });
+    /*
+   * The user scrapes using a DOM navigation path. In this case
+   * elements in a Craiglist listing.
+   */
+  it('should find attribute of an element based on dom navigation', function (done) {
+    var pattern = {
+      date: 'time datetime',
+      link: 'a href'
+    };
+    var options = {
+      pattern: pattern,
+      html: fixtures.craigslistHtml,
+      container: '.row'
+    };
+    yaws(options)
+    .scrape(function (response) {
+      assert.deepEqual(fixtures.assertElementNavigationAttribute, response);
       done();
     });
   });
@@ -169,7 +183,7 @@ describe('yaws scrape', function () {
     var callScrape = function () {
       yaws(options).scrape();
     };
-    assert.throws(callScrape, Error, 'Container ".my-super-non-existent-container" was not found in HTML.');
+    assert.throws(callScrape, Error, 'No elements to iterate, check if containers exist!');
   });
   //
   it('should remove whitespaces in object\'s texts', function (done) {

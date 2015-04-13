@@ -46,27 +46,36 @@ module.exports.assertOptionsList = [
 
 module.exports.assertElementNavigation = [
   {
-    date: '2015-04-04 18:08',
     title: 'Grand Loft Plateau - Metro - Balcon',
     price: '$650',
     housingType: '/ 1br -',
-    address: '(2473 Jean-Talon)',
+    address: '(2473 Jean-Talon)'
+  },
+  {
+    title: '2.5 Marquette Coin Rachel Plateau',
+    price: '$665',
+    housingType: '/ 1br -',
+    address: '(4295 Marquette)'
+  },
+  {
+    title: 'GRAND LOFT 2473 Jean-Talon #4',
+    price: '$650',
+    housingType: '/ 1br -',
+    address: '(2473 Jean-Talon #4)'
+  }
+];
+
+module.exports.assertElementNavigationAttribute = [
+  {
+    date: '2015-04-04 18:08',
     link: '/apa/4931613761.html'
   },
   {
     date: '2015-04-04 18:07',
-    title: '2.5 Marquette Coin Rachel Plateau',
-    price: '$665',
-    housingType: '/ 1br -',
-    address: '(4295 Marquette)',
     link: '/apa/4957471144.html'
   },
   {
     date: '2015-04-04 18:07',
-    title: 'GRAND LOFT 2473 Jean-Talon #4',
-    price: '$650',
-    housingType: '/ 1br -',
-    address: '(2473 Jean-Talon #4)',
     link: '/apa/4929549185.html'
   }
 ];
