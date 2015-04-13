@@ -56,7 +56,7 @@ describe('yaws scrape', function () {
    * The user scrapes an attribute's value by using a regex. In this case
    * a link (href attribute) for a wikipedia article in German.
    */ 
-  it.only('should find an attribute value for regex in pattern', function (done) {
+  it('should find an attribute value for regex in pattern', function (done) {
     var pattern = {
       link: {
         regex: /Deutsch/,
@@ -80,7 +80,7 @@ describe('yaws scrape', function () {
   /*
    * The user scrapes defining an array of regex
    */ 
-  it('should find a list of options (regexp, dom, etc.)', function (done) {
+  it.only('should find a list of options (regexp, dom, etc.)', function (done) {
     var pattern = {
       status: [ /Delivered, In\/At Mailbox/, /Departed USPS Facility/, /Arrived at USPS Origin Facility/ ]
     };
@@ -89,11 +89,11 @@ describe('yaws scrape', function () {
       html: fixtures.uspsHtml,
       container: 'tr'
     };
-    yaws(options, function (response) {
+    yaws(options)
+    .scrape(function (response) {
       assert.deepEqual(fixtures.assertOptionsList, response);
       done();
-    })
-    .scrape();
+    });
   });
   /*
    * The user scrapes using a DOM navigation path. In this case
