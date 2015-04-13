@@ -43,12 +43,12 @@ Depends on following libs:
 
 ## Run tests
 
- - `npm install -g mocha`
+ - `npm install -g mocha` for global installation
  - `mocha`
 
 ## Usage
 
-#### yaws(options, callback).scrape()
+#### yaws(options).scrape(callback)
 
  - url: The url to scrape
  - html: Optionally scrape an HTML
@@ -70,4 +70,4 @@ See examples.md for extensive list of use cases
 
 ##### Copyright
 
-Shark in logo by [http://www.how-to-draw-funny-cartoons.com/](Martin Berube)
+Shark in logo by [Martin Berube](http://www.how-to-draw-funny-cartoons.com/)
