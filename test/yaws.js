@@ -118,13 +118,19 @@ describe('yaws scrape', function () {
     });
   });
     /*
-   * The user scrapes using a DOM navigation path. In this case
+   * The user scrapes for an attribute using a DOM navigation path. In this case
    * elements in a Craiglist listing.
    */
   it('should find attribute of an element based on dom navigation', function (done) {
     var pattern = {
-      date: 'time datetime',
-      link: 'a href'
+      date: {
+       path: 'time',
+       attribute: 'datetime'
+      },
+      link: {
+       path: 'a',
+       attribute: 'href'
+      }
     };
     var options = {
       pattern: pattern,
@@ -175,15 +181,20 @@ describe('yaws scrape', function () {
    * The user scrapes defining a container that does not exist
    */
   it('should throw error if container or dom navigation path not found', function (done) {
+    var pattern = {
+      title: '.hdrlnk'
+    };
     var options = {
-      pattern: {},
+      pattern: pattern,
       html: fixtures.craigslistHtml,
-      container: '.my-super-non-existent-container'
+      container: '.row-non-existent'
     };
-    var callScrape = function () {
-      yaws(options).scrape();
-    };
-    assert.throws(callScrape, Error, 'No elements to iterate, check if containers exist!');
+    yaws(options)
+    .scrape(function (response, error) {
+      console.log(error)
+      assert.equal('No elements to iterate, check if containers exist!', error);
+      done();
+    });
   });
   //
   it('should remove whitespaces in object\'s texts', function (done) {
