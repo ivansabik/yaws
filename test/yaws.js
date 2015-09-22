@@ -44,7 +44,8 @@ describe('yaws scrape', function () {
     var options = {
       pattern: pattern,
       html: fixtures.uspsHtml,
-      container: 'tr'
+      container: 'tr',
+      forceMatch: true
     };
     yaws(options)
     .scrape(function (response) {
